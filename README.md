@@ -2,18 +2,11 @@
 
 Retrogaming on the Raspberry Pi
 
-## Mac: Find SDCard from Terminal
+## What can you emulate>
 
-The instructions from Lakka are incorrect.
+| Pi Version | Console |
+|---|---|
+| 1 | Turbo Grafx 15 |
+| 1 overclocked, Zero, 2 | NES, Turbo Grafx 16, Genesis, SNES*, GBA |
+| 2, 3 | 8-bit, 16-bit, N64*, PS1 |
 
-`diskutil list`
-
-### Unmount (not eject)
-
-If you card is disk4:
-
-`diskutil unmountDisk /dev/disk4`
-
-### Write the image to the SD card with dd
-
-`dd if=/path/to/image.img of=/dev/rdisk4 bs=1m`
