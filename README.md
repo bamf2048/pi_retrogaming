@@ -4,6 +4,8 @@ Retrogaming on the Raspberry Pi
 
 ## Mac: Find SDCard from Terminal
 
+The instructions from Lakka are incorrect.
+
 `diskutil list`
 
 ### Unmount (not eject)
