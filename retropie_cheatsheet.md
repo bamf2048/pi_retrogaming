@@ -13,5 +13,5 @@ Useful hotkeys:
 | Select + b | Reset |
 
 Remember: Retropie is the over-arching OS and menu that lets you choose a system and set system-side settings. 
-Retroarch is the frontend for the console -- for all intents and purposed this is the emulator (it's really not -- 
-the emualtion is handled by drivers that Retroarch loads).
+Retroarch is the frontend for the console -- for all intents and purposes this is the emulator (it's really not -- 
+the emulation is handled by drivers that Retroarch loads).
