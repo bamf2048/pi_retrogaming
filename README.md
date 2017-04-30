@@ -22,4 +22,4 @@ I've used with success:
 
 ## Distros
 
-There is Retropie and there's Lakka. I personally like Lakka for the fast bootup, consistent UI (Playstation Ribbon) and ease of use. Retropie, however, is much more popular maybe due to it being older and support much more consoles and even older computers.
+There is Retropie and there's Lakka. I personally like Lakka for the fast bootup, consistent UI (Playstation Ribbon) and ease of use. Retropie, however, is much more popular. Maybe it's due to it being older and supporting much more consoles and even older computers.
