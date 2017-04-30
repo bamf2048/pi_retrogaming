@@ -1,5 +1,8 @@
 # Flash your SD Card
 
+Use [Apple Pi Baker](https://www.tweaking4all.com/software/macosx-software/macosx-apple-pi-baker/) 
+or if you want to use the terminal:
+
 ## Mac: Find SDCard from Terminal
 
 The instructions from Lakka are incorrect.
