@@ -1,6 +1,6 @@
 # Retropie Cheatsheet
 
-Useful hotkeys:
+Useful hotkeys/buttons while playing:
 
 | Button Combo | Action |
 |---|---|
