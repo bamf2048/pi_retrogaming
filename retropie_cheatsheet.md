@@ -1,6 +1,6 @@
 # Retropie Cheatsheet
 
-Useful hotkeys/buttons while playing:
+## Useful hotkeys/buttons while playing:
 
 | Button Combo | Action |
 |---|---|
@@ -15,3 +15,13 @@ Useful hotkeys/buttons while playing:
 Remember: Retropie is the over-arching OS and menu that lets you choose a system and set system-side settings. 
 Retroarch is the frontend for the console -- for all intents and purposes this is the emulator (it's really not -- 
 the emulation is handled by drivers that Retroarch loads).
+
+## Username and Password for sftp/ssh
+
+Username: pi
+
+Password: raspberry
+
+## SAMBA
+
+Login as guest
