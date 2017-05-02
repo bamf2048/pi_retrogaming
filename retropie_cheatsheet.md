@@ -18,6 +18,15 @@ the emulation is handled by drivers that Retroarch loads).
 
 ## Username and Password for sftp/ssh
 
+SSH is disabled by default. Go to the 
+
+1. Retopie menu 
+1. Raspi-config 
+1. interfacing options 
+1. SSH 
+1. Enable 
+1. reboot your pi
+
 Username: pi
 
 Password: raspberry
