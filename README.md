@@ -20,7 +20,7 @@ I've used with success:
 - PS3 over bluetooth
 - Xbox 360 with USB dongle (knockoff from Amazon)
 
-Note that for the 360 controller, the A, B buttons are swapped and also the X, Y. Microsoft strikes again.
+Note that for the 360 controller, the A, B buttons are swapped and also the X, Y buttons. Microsoft strikes again.
 
 ## Distros
 
