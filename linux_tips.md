@@ -38,6 +38,8 @@ or by IP address
 
 `ssh-copy-id pi@192.168.1.69`
 
+----
+
 ## Display Your Pi Stats
 
 ```
