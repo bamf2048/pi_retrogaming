@@ -1,6 +1,6 @@
 # RetroPie Linux Tips
 
-## Easy File Management
+## Easy File Management with Midnight Commander
 
 From terminal type:
 
