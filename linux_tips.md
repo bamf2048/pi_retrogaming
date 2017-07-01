@@ -36,3 +36,4 @@ or by IP address
 
 `ssh-copy-id pi@192.168.1.69`
 
+You can also open FTP, SFTP in your windows! Under the top navbar both `Left` and `Right` use the `FTP link...` or `SFTP link...` menu items. Enter the full url of the host you want to connect to. E.g. `pi@ftp://192.168.1.69`. Now you can copy from Pi to Pi.
