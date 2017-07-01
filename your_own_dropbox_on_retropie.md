@@ -1,5 +1,11 @@
 # Self-hosted Dropbox on your Retropie Using Syncthing
 
+----
+
+TLDR version of this: https://www.htpcguides.com/install-syncthing-raspberry-pi-bittorrent-sync-alternative/
+
+----
+
 I needed a way to sync my games across a few Retropies. Obviously not wanting to use 
 Dropbox, Google Drive, Onedrive for privacy reasons. **Syncthing** is decentralized 
 and fits my needs. Install, tweak settings, and via web browser, choose folders and 
@@ -173,7 +179,3 @@ If you need to run syncthing:
 Admin your Syncthing on your Pi: 
 
 `http://192.168.1.69:8384`
-
-----
-
-TLDR version of this: https://www.htpcguides.com/install-syncthing-raspberry-pi-bittorrent-sync-alternative/
