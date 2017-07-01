@@ -9,8 +9,8 @@ From terminal type:
 Retropie comes installed with a "graphical" file manager named Midnight Commander. 
 It has two windows to do file operations like copy from one window to another, 
 delete, rename, etc. You can navigate through folders by using the arrows keys and 
-hitting enter -- or if you're connected to your Pi using SSH you can use your
-mouse.
+hitting enter -- or **if you're connected to your Pi using SSH you can use your
+mouse.**
 
 Some keyboard commands:
 
