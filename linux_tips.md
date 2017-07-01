@@ -12,6 +12,8 @@ delete, rename, etc. You can navigate through folders by using the arrows keys a
 hitting enter -- or **if you're connected to your Pi using SSH you can use your
 mouse.**
 
+You can also open FTP, SFTP in your windows! Under the top navbar both `Left` and `Right` use the `FTP link...` or `SFTP link...` menu items. Enter the full url of the host you want to connect to. E.g. `pi@ftp://192.168.1.69`. Now you can copy from Pi to Pi.
+
 Some keyboard commands:
 
 |Key|Description|
@@ -36,4 +38,20 @@ or by IP address
 
 `ssh-copy-id pi@192.168.1.69`
 
-You can also open FTP, SFTP in your windows! Under the top navbar both `Left` and `Right` use the `FTP link...` or `SFTP link...` menu items. Enter the full url of the host you want to connect to. E.g. `pi@ftp://192.168.1.69`. Now you can copy from Pi to Pi.
+## Display Your Pi Stats
+
+```
+   .***.     Saturday,  1 July 2017,  2:39:29 pm UTC
+   *****     Linux 4.4.50+ armv6l GNU/Linux
+   `***'
+    |*|      Filesystem      Size  Used Avail Use% Mounted on
+    |*|      /dev/root        15G  2.1G   12G  15% /
+  ..|*|..    Uptime.............: 0 days, 09h55m47s
+.*** * ***.  Memory.............: 28792kB (Free) / 250400kB (Total)
+*******@@**  Running Processes..: 103
+`*****@@**'  IP Address.........: 192.168.1.13
+ `*******'   Temperature........: CPU: 47°C/116°F GPU: 47°C/116°F
+   `"""'     The RetroPie Project, https://retropie.org.uk
+```
+
+Type `retropie_welcome`
