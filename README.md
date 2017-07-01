@@ -20,6 +20,8 @@ I've used with success:
 - PS3 over bluetooth
 - Xbox 360 with USB dongle (knockoff from Amazon)
 
+Note that for the 360 controller, the A, B buttons are swapped and also the X, Y. Microsoft strikes again.
+
 ## Distros
 
 There is Retropie and there's Lakka. I personally like Lakka for the fast bootup, consistent UI (Playstation Ribbon) and ease of use. Retropie, however, is much more popular. Maybe it's due to it being older and supporting much more consoles and even older computers.
