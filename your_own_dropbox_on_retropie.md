@@ -170,6 +170,10 @@ If you need to run syncthing:
 
 `sudo service syncthing start`
 
+Admin your Syncthing on your Pi: 
+
+`http://192.168.1.69:8384`
+
 ----
 
 TLDR version of this: https://www.htpcguides.com/install-syncthing-raspberry-pi-bittorrent-sync-alternative/
