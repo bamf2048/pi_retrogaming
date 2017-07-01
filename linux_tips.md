@@ -1,4 +1,4 @@
-# Linux Tips
+# RetroPie Linux Tips
 
 ## Easy File Management
 
@@ -22,6 +22,7 @@ Some keyboard commands:
 |tab|move cursor to the opposite window|
 |f1-f10|file operations|
 
+
 ----
 
 ## SSH without password
@@ -37,6 +38,13 @@ Copy it to your Pi (or other machine...):
 or by IP address
 
 `ssh-copy-id pi@192.168.1.69`
+
+Now connect as usual:
+
+`ssh pi@192.168.1.69`
+
+and now you don't need to type in your password.
+
 
 ----
 
