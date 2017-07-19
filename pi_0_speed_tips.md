@@ -5,7 +5,6 @@
 ```
 hdmi_group=1
 hdmi_mode=4
-That's 720p @ 60Hz
 ```
 
 - make sure your usb hub isn't drawing too much power (compare speeds by unplugging/plugging in)
