@@ -40,10 +40,12 @@ Add this (replace with your ip but leave the :port):
 
 ```
 <gui enabled="true" tls="false">
- <address>192.168.1.69:8384</address>
+ <address>0.0.0.0:8384</address>
  <apikey>VbsKT2fCELYldTI74Tk4BKCbJP8Frlij</apikey>
 </gui>
 ```
+
+You'll be able to access the gui by visiting http://retropie.local:8384 or via it's ip address:8384.
 
 Autostart on boot:
 
