@@ -12,6 +12,6 @@ hdmi_mode=4
 
 ## Overclock
 
-https://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwi39sCDp5TVAhXL1IMKHYR9BkkQtwIIJjAA&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D3ndgLXz4e90&usg=AFQjCNGYGz68sJgp_05dMZE8mUFRRJ95Sw
+[ETA Prime's Tip](https://www.youtube.com/watch?v=3ndgLXz4e90)
 
 Use a heat sink!
