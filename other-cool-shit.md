@@ -1,5 +1,7 @@
 # Other Cool Shit
 
+This is other cool stuff or things you might find handy.
+
 ## Motioneye
 
 Motioneye is a security camera system with web interface. You can connect multiple webcams/cameras, detect motion to capture photos or videos. Motioneye runs in the background.
@@ -39,7 +41,23 @@ systemctl restart motioneye
 
 https://github.com/ccrisan/motioneye/wiki/Install-On-Raspbian
 
+
+## Print Server
+
+Turns you printer into a wireless network printer. All of you computers can print to it.
+
+https://www.makeuseof.com/tag/make-wireless-printer-raspberry-pi/
+
+### Add Airprint
+
+Airprint lets you print from your iPhone or Android device.
+
+https://www.makeuseof.com/tag/add-airprint-support-raspberry-pi-print-server/
+
+
 ## Take remote screenshots
+
+If you ever want to take screenshots in the Emulationstation menu...
 
 Install:
 
@@ -58,7 +76,7 @@ https://retropie.org.uk/forum/topic/8896/taking-screenshots-from-emulationstatio
 
 ## Display images from terminal
 
-Install: 
+Install:
 
 ```
 sudo apt-get update
@@ -75,22 +93,9 @@ fbi -a -t 5 *.jpg
 
 https://www.raspberrypi-spy.co.uk/2017/02/how-to-display-images-on-raspbian-command-line-with-fbi/
 
-## Print Server
-
-Turns you printer into a wireless network printer. All of you computers can print to it.
-
-https://www.makeuseof.com/tag/make-wireless-printer-raspberry-pi/
-
-### Add Airprint
-
-Airprint lets you print from your iPhone or Android device.
-
-https://www.makeuseof.com/tag/add-airprint-support-raspberry-pi-print-server/
-
 
 ## Pixel Desktop
 
-## Miscellaneous Bash 
+Installing the desktop might come in handy. You can use it like a slowish PC. Browse websites using Chromium, do some file management, etc.
 
-- scan wifi networks: `sudo iwlist wlan0 scan | grep ESSID`
-- show your Pi temp and diskspace: `retropie_welcome`
+Install from the Retropie, Retropie Configuration menu. Restart Emulationstation. You can then launch to it from the Ports menu or type `startx` from the terminal.

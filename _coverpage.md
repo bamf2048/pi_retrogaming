@@ -1,9 +1,7 @@
 # Retropie Done Quick
 
-This doc assumes you've already put Retropie on your SD, USB stick or SSD.
+**This doc is not for beginners! But feel free to browse.**
 
-First of all you should really read the official docs - they're really good. 
-Everything here is probably covered in the official docs but
-this is more of a quickstart or get-to-the-point guide on specific things.
+It assumes basic knowledge of the terminal/Bash, Linux and you're here to get quick, to-the-point tips for Retropie. Everyhting here is mostly covered by the official documentation. Seriously, they're good.
 
 [Official Docs](https://retropie.org.uk/docs/ ':target=_blank') [Continue](/#main)

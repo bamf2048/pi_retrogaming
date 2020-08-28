@@ -1,4 +1,4 @@
-# RetroPie Linux Tips
+# Bash/Linux Tips
 
 ## Easy File Management with Midnight Commander
 
@@ -6,9 +6,9 @@ From terminal type:
 
 `mc`
 
-Retropie comes installed with a "graphical" file manager named Midnight Commander. 
-It has two windows to do file operations like copy from one window to another, 
-delete, rename, etc. You can navigate through folders by using the arrows keys and 
+Retropie comes installed with a "graphical" file manager named Midnight Commander.
+It has two windows to do file operations like copy from one window to another,
+delete, rename, etc. You can navigate through folders by using the arrows keys and
 hitting enter -- or **if you're connected to your Pi using SSH you can use your
 mouse.**
 
@@ -65,3 +65,7 @@ and now you don't need to type in your password.
 ```
 
 Type `retropie_welcome`
+
+## Scan wifi networks
+
+`sudo iwlist wlan0 scan | grep ESSID`
