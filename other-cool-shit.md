@@ -1,6 +1,6 @@
 # Other Cool Shit
 
-This is other cool stuff or things you might find handy.
+This is other cool stuff you can run in the background or find handy in the terminal.
 
 ## Motioneye
 
@@ -39,20 +39,23 @@ pip install motioneye --upgrade
 systemctl restart motioneye
 ```
 
-https://github.com/ccrisan/motioneye/wiki/Install-On-Raspbian
+Source: https://github.com/ccrisan/motioneye/wiki/Install-On-Raspbian
 
+---
 
 ## Print Server
 
-Turns you printer into a wireless network printer. All of you computers can print to it.
+Turns your printer into a wireless network printer. All of your computers can print to it.
 
-https://www.makeuseof.com/tag/make-wireless-printer-raspberry-pi/
+Source: https://www.makeuseof.com/tag/make-wireless-printer-raspberry-pi/
 
 ### Add Airprint
 
 Airprint lets you print from your iPhone or Android device.
 
-https://www.makeuseof.com/tag/add-airprint-support-raspberry-pi-print-server/
+Source: https://www.makeuseof.com/tag/add-airprint-support-raspberry-pi-print-server/
+
+---
 
 
 ## Take remote screenshots
@@ -72,7 +75,9 @@ From your Pi terminal or via SSH and type:
 raspi2png -p SCREENSHOTNAME.png
 ```
 
-https://retropie.org.uk/forum/topic/8896/taking-screenshots-from-emulationstation-s-menus/6
+Source: https://retropie.org.uk/forum/topic/8896/taking-screenshots-from-emulationstation-s-menus/6
+
+---
 
 ## Display images from terminal
 
@@ -91,4 +96,13 @@ fbi -a *.jpg
 fbi -a -t 5 *.jpg
 ```
 
-https://www.raspberrypi-spy.co.uk/2017/02/how-to-display-images-on-raspbian-command-line-with-fbi/
+<details>
+<summary>What it do?</summary>
+
+1. view myphoto.jpg
+2. view all files ending in .jpg, use left right to navigate
+3. slideshow with 5 second delay
+
+</details>
+
+Source: https://www.raspberrypi-spy.co.uk/2017/02/how-to-display-images-on-raspbian-command-line-with-fbi/
