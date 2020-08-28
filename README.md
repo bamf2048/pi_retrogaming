@@ -1,27 +1,27 @@
-# Pi Retrogaming
+# Glossary
 
-Retrogaming on the Raspberry Pi
+Retropie consists of:
 
-## What can you emulate
+## Rasbian
 
-| Pi Version | Console |
-|---|---|
-| 1 | Turbo Grafx 15 |
-| 1 overclocked, Zero, 2 | NES, Turbo Grafx 16, Genesis, SNES<sup>1</sup>, GBA |
-| 2<sup>2</sup>, 3 | 8-bit, 16-bit, N64<sup>3</sup>, PS1 |
+The operating system (if you're using a Raspberry Pi)    
+![Rasbian Terminal](https://res.cloudinary.com/bamf2048/image/upload/v1598306057/retropie/retropi_terminal.png  ':size=500')
 
-* 1 - Games with special chips may run poorly. 2 - I don't own a Pi 2 so I'm just going by what the internet says. 3 - N64 emulation, generally, runs poorly.
+Rasbian is a Debian Linux distribution. You can use Bash commands and the `apt-get` package manager to install all sorts of software.
 
-## Controllers
+## Emulationstation
 
-I've used with success:
+The menuing system you use to launch games and access Retropie settings    
+![Emulationstation](https://res.cloudinary.com/bamf2048/image/upload/v1598306057/retropie/es_nes.png  ':size=500')
 
-- PS2 Dualshock with USB adapter
-- PS3 over bluetooth
-- Xbox 360 with USB dongle (knockoff from Amazon)
 
-Note that for the 360 controller, the A, B buttons are swapped and also the X, Y buttons. Microsoft strikes again.
+## Retroarch
 
-## Distros
+The collection of emulators   
+![Retroarch playing NES Super Mario Bros 3](https://res.cloudinary.com/bamf2048/image/upload/v1598306385/retropie/nes_smb.png ':size=500:class=medium-zoom-img')
 
-There is Retropie and there's Lakka. I personally like Lakka for the fast bootup, consistent UI (Playstation Ribbon) and ease of use. Retropie, however, is much more popular. Maybe it's due to it being older and supporting much more consoles and even older computers.
+
+# Retropad. What is it?
+
+When you've configured the buttons on your game controller you're really mapping them to an imaginary controler called
+the Retropad. This is a controller that is like the *Nintendo Pro Controller* with A button (right-most) being the primary button and the B (bottom-most) button being back/cancel button. You can swap A and B to be Xbox styled in Retroarch.
