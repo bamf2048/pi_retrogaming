@@ -1,6 +1,6 @@
-# Post Boot
+# Configuration
 
-All the following things can be done using `raspi-config` or using the Retropie section. 
+Most of the following things can be done using `raspi-config` or using the Retropie section. 
 But if you're confortable editing files and navigating a Linux filesystem... 
 or perhaps you'd like to script all these settings for multiple Pi's...
 
@@ -42,8 +42,9 @@ hdmi_cvt=1024 600 60
 
 Reboot!
 
+---
 
-- Install pixel desktop
+# Emulationstation
 
 
 ## Favourites, Recent Menus
@@ -63,14 +64,31 @@ Reboot!
 5. Press left/right and choose Slideshow (or Random Videos)
 
 
-## Set default controllers
+## Scrape and get videos, marquees 
+
+Use Selph's scraper: https://www.youtube.com/watch?v=rj1841sL8ro&feature=youtu.be
+
+---
+
+# Controllers
+
+
+## Set default controllers for a console
 
 If you want to *not* use the default controler for player 1...
 
-- Open game
+- Run a game for the console you want to change
 - Select + X to open Retroarch GUI
 - Change player 1 controller
+- Change the rest of the player controllers otherwise one controller may be set or more than one player
 - Save Config (will save only for the open system)
+
+
+## Remove/delete all controllers
+
+```
+rm /home/pi/.emulationstation/es_input.cfg
+```
 
 ---
 
@@ -85,10 +103,28 @@ Boot from sd and then ssd (if ssd dies, edit /boot/command.txt to restore bootin
 - https://www.raspberrypi.org/forums/viewtopic.php?t=202890
 - https://jamesachambers.com/raspberry-pi-4-usb-boot-config-guide-for-ssd-flash-drives/
 
----
-
-# Scrape and get videos, marquees 
-
-Use Selph's scraper: https://www.youtube.com/watch?v=rj1841sL8ro&feature=youtu.be
+?> Tags: Hardware
 
 ---
+
+# Migrating from one Pi to another
+
+Copy the following folders:
+
+```
+/etc/emulationstation  
+/opt/retropie/configs  
+/home/pi/RetroPie/BIOS  
+/home/pi/RetroPie/roms 
+```
+
+Also recommmended by Reddit:
+
+- `/boot/config.txt` -- The main boot command that tells Raspberry Pi how to act. Configures overclock settings.
+- `/opt/retropie/configs/all/emulationstation/collections` -- The folder that contain all your custom collections
+- `/opt/retropie/configs/all/retroarch/autoconfig` -- Controller configuration files.
+- `/opt/retropie/` -- I personally back up all my retropie config files because I have overlays added for handhelds, and all lr- sstems really. If I accidentally screw up a RetroArch config, I always have these to fall back on.
+- `/opt/retropie/configs/all/emulationstation` -- If you've moved your es_settings.cfg to this location don't forget about it! Tis keeps your es_settings.cfg file permanent until you manually change it. I personally use this.
+- `/home/pi/.local/share/mupen64plus/hires_texture` -- N64 Hi-Res textures if you have them.
+- `/opt/retropie/configs/scummvm/scummvm.ini` -- can be helpful if you change your save location for scummvm. Default is on the S card, I personally move it to my roms/scummvm/saves/ folder on my USB.
+- `/opt/retropie/configs/all/retroarch/overlay/` -- Gotta save those overlays and configs!

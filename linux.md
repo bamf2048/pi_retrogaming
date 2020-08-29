@@ -4,7 +4,7 @@
 
 From terminal type:
 
-`mc`
+`mc` or `sudo mc`
 
 Retropie comes installed with a "graphical" file manager named Midnight Commander.
 It has two windows to do file operations like copy from one window to another,
@@ -17,7 +17,7 @@ You can also open FTP, SFTP in your windows! Under the top navbar both `Left` an
 Some keyboard commands:
 
 |Key|Description|
-|--|--|
+|:--|:--|
 |ctrl-t|highlight file (copying, moving more than one file)|
 |tab|move cursor to the opposite window|
 |f1-f10|file operations|
@@ -27,7 +27,7 @@ Some keyboard commands:
 
 ## SSH without password
 
-On your Mac or Linux machine, generate your machine's key:
+If you haven't already, on your Mac or Linux machine, generate your machine's key:
 
 `ssh-keygen`
 
@@ -66,6 +66,17 @@ and now you don't need to type in your password.
 
 Type `retropie_welcome`
 
+
 ## Scan wifi networks
 
 `sudo iwlist wlan0 scan | grep ESSID`
+
+## Webserver from current directory
+
+`python -m SimpleHTTPServer 8000`
+
+## Poll controller
+
+Replace 0 (zero) in js0 with controller usb port
+
+`jstest /dev/input/js0`
