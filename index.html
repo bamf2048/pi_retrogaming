@@ -8,7 +8,7 @@
 	<title>Retropie Done Quick</title>
 	<meta name="keywords" content="retropie, retrogaming, emulation, retroarch, raspberry pi">
 	<meta name="description" content="Retropie tips and tricks">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22black%22/><text y=%22.9em%22 font-size=%2280%22>🥧</text></svg>">
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22black%22/><text y=%22.9em%22 font-size=%2280%22>🥧</text></svg>">
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" title="vue">
 	<link rel="stylesheet" href="style.css" title="vue">
 
@@ -16,40 +16,80 @@
 
 <body>
 	<div id="app">Loading ...</div>
-  <script type="text/javascript" src="https://unpkg.com/onscreen/dist/on-screen.umd.min.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/onscreen/dist/on-screen.umd.min.js"></script>
+	<script>
+	const cipher = salt => {
+		const textToChars = text => text.split('').map(c => c.charCodeAt(0));
+		const byteHex = n => ("0" + Number(n).toString(16)).substr(-2);
+		const applySaltToChar = code => textToChars(salt).reduce((a,b) => a ^ b, code);
+
+		return text => text.split('')
+				.map(textToChars)
+				.map(applySaltToChar)
+				.map(byteHex)
+				.join('');
+	}
+
+	const decipher = salt => {
+		const textToChars = text => text.split('').map(c => c.charCodeAt(0));
+		const applySaltToChar = code => textToChars(salt).reduce((a,b) => a ^ b, code);
+		return encoded => encoded.match(/.{1,2}/g)
+				.map(hex => parseInt(hex, 16))
+				.map(applySaltToChar)
+				.map(charCode => String.fromCharCode(charCode))
+				.join('');
+	}
+	function getvalue() {
+		console.log(event.target.value);
+	}
+	const url = new URL(document.URL);
+	const urlsp = url.searchParams;
+	// console.log(encodeURI(urlsp.get("x")));
+	const myDecipher = decipher( urlsp.get('x') );
+
+	</script>
 	<script>
 		window.$docsify = {
-      name: 'Retropie Done Quick',
-      // auto2top: true,
-      loadSidebar: true,
-      maxLevel: 6,
-      subMaxLevel: 6,
-      coverpage: true,
-      search: 'auto',
-    }
-    // My plugin:
-    // Expand the README link in the sidebar when scrolling from the
-    // coverpage. Unfortunately auto2top makes the page jump.
-    // https://github.com/docsifyjs/docsify/issues/202
-    function readme(hook, vm){
-      hook.ready(function() {
-        var exist = document.querySelectorAll('.cover + main [href="#/README"]')[0];
-        if (exist) {
-          var os = new OnScreen();
-          os.on('leave', '.cover', (element, event)=>{
-            exist.click();
-          });
-        } else {
-          console.log('no readme');
-        }
-      });
-    }
-    $docsify.plugins = [].concat(readme, $docsify.plugins);
-  </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+			name: 'Retropie Done Quick',
+			// auto2top: true,
+			loadSidebar: true,
+			maxLevel: 6,
+			subMaxLevel: 6,
+			coverpage: true,
+			search: 'auto',
+		}
+		// My plugin:
+		// Expand the README link in the sidebar when scrolling from the
+		// coverpage. Unfortunately auto2top makes the page jump.
+		// https://github.com/docsifyjs/docsify/issues/202
+		function readme(hook, vm){
+			hook.ready(function() {
+
+				// const myCipher = cipher('yourcipherhere');
+				// console.log( myCipher(x) );
+
+				var x = document.getElementById('thang').innerHTML;
+				document.getElementById('thing').innerHTML = myDecipher(x);
+
+
+
+				var exist = document.querySelectorAll('.cover + main [href="#/README"]')[0];
+				if (exist) {
+					var os = new OnScreen();
+					os.on('leave', '.cover', (element, event)=>{
+						exist.click();
+					});
+				} else {
+					console.log('no readme');
+				}
+			});
+		}
+		$docsify.plugins = [].concat(readme, $docsify.plugins);
+	</script>
+	<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 </body>
 
 </html>
