@@ -8,7 +8,7 @@ Pi 1 and Zero should be able to run 8/16 bit consoles. SNES SuperFX and GBA may 
 
 To run emulators smoothly you must overclock. Add this to your `config.txt`:
 
-```
+```sudo nano /boot/config.txt
 arm_freq=1000
 sdram_freq=500
 core_freq=500
@@ -27,7 +27,7 @@ Source: https://haydenjames.io/raspberry-pi-safe-overclocking-settings/
 
 - set to 720p:
 
-```
+```sudo nano /boot/config.txt
 hdmi_group=1
 hdmi_mode=4
 ```

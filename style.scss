@@ -79,3 +79,7 @@ section.cover {
 .markdown-section pre > code {
 	line-height: 1.4;
 }
+
+pre::after {
+	font-weight: normal;
+}

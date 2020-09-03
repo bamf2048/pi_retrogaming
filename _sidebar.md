@@ -3,6 +3,7 @@
 - [Configuration](configuration.md)
 - [Consoles & Games](console.md)
 - [Enhancements](enhancements.md)
+- [Migrating](migrating.md)
 - [Pi 1/Zero](pi-1.md)
 - [Other Cool Shit](other-cool-shit.md)
 - [Linux Tips](linux.md)

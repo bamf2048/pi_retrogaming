@@ -4,7 +4,7 @@ Unsorted random issues.
 
 ## Green flickering lines on your display?
 
-```
+```sudo nano /boot/config.txt
 config_hdmi_boost=4
 ```
 

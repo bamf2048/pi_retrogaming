@@ -1,6 +1,6 @@
 ## Dreamcast Two-ways
 
-**Dreamcast support is not installed by default** but there are two emulators you're able to install: **Redream** (standalone program) and **Flycast** (Retroarch core). Some games play better with either one of these so we can install both and you can set which emulator to run using the launch menu. Personally I think Redream is much better but you lose the ease of use of Retrocore ().
+**Dreamcast support is not installed by default** but there are two emulators you're able to install: **Redream** (standalone program) and **Flycast** (Retroarch core). Some games play better with either one of these so we can install both and you can set which emulator to run using the launch menu. Personally I think Redream is much better but you lose the ease of use of Retroarch.
 
 Better in Redream, crappy in Flycast:
 
@@ -64,13 +64,15 @@ Note: Flycast can also play Naomi arcade games.
 
 ---
 
-### gdi vs cdi
+### gdi vs cdi vs chd
 
-Get the .gdi version of a game if you can.
+Get the .gdi  or .chd of .gdi versions of a game if you can.
 
 **.gdi** files are text files that tell Redream what the collection of files are to be used for a game. If you rename your .bin or .raw files be sure to update the contents of the .gdi file.
 
 **.cdi** files are ripped games. They may have highly compressed movies or files removed. .gdi are complete copies.
+
+**.chd** are like zip files. If you can find chd versions of the gdi files these will be most convenient.
 
 ### Dreamcast Windows CE games
 

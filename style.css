@@ -88,4 +88,8 @@ section.cover .cover-main > p:last-child a:last-child:hover {
 .markdown-section pre > code {
   line-height: 1.4;
 }
+
+pre::after {
+  font-weight: normal;
+}
 /*# sourceMappingURL=style.css.map */
