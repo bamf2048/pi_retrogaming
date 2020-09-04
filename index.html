@@ -19,15 +19,17 @@
 	<script type="text/javascript" src="https://unpkg.com/onscreen/dist/on-screen.umd.min.js"></script>
 	<script>
 		const c_in = nacl => {
-			const t2c = text => text.split('').map(c => c.charCodeAt(0));
-			const bhx = n => ("0" + Number(n).toString(16)).substr(-2);
-			const tonacl = code => t2c(nacl).reduce((a,b) => a ^ b, code);
+			const
+				t2c = text => text.split('').map(c => c.charCodeAt(0)),
+				bhx = n => ("0" + Number(n).toString(16)).substr(-2),
+				tonacl = code => t2c(nacl).reduce((a,b) => a ^ b, code);
 			return text => text.split('').map(t2c).map(tonacl).map(bhx).join('');
 		}
 
 		const d_out = nacl => {
-			const t2c = text => text.split('').map(c => c.charCodeAt(0));
-			const tonacl = code => t2c(nacl).reduce((a,b) => a ^ b, code);
+			const
+				t2c = text => text.split('').map(c => c.charCodeAt(0)),
+				tonacl = code => t2c(nacl).reduce((a,b) => a ^ b, code);
 			return encoded => encoded.match(/.{1,2}/g).map(hex => parseInt(hex, 16)).map(tonacl).map(charCode => String.fromCharCode(charCode)).join('');
 		}
 
@@ -47,36 +49,37 @@
 		}
 		// My plugin:
 		function readme(hook, vm){
-			hook.ready(function() {
+			hook.doneEach(function() {
 				const
 					url = new URL(document.URL)
 					dog = url.searchParams.get('x'),
 					gzr = d_out(dog),
 					zul = c_in(dog),
-					nodes = {
+					dom = {
 						in: document.getElementById('in'),
 						out: document.getElementById('out'),
 						md: document.getElementById('md'),
 					};
-				if (nodes.in.value && gzr) {
-					// nodes.md.value = gzr(nodes.in.value);
-					nodes.out.innerHTML = marked( nodes.md.value = gzr(nodes.in.value) );
-					auto_grow(nodes.md);
+				if (dom.in && gzr) {
+					dom.out.innerHTML = marked( dom.md.value = gzr(dom.in.value) );
+					auto_grow(dom.md);
 				}
-				nodes.md.onblur = function(){
+
+				if (dom.md) dom.md.onblur = function(){
 					if (this.value && zul) {
-						nodes.out.innerHTML = marked(this.value);
+						dom.out.innerHTML = marked(this.value);
 						auto_grow(this);
 					}
 				};
-				nodes.in.onclick = function(){
-					if (nodes.md.value && zul) {
-						this.value = zul(nodes.md.value);
+				if (dom.in) dom.in.onclick = function(){
+					if (dom.md.value && zul) {
+						this.value = zul(dom.md.value);
 						this.select();
 						document.execCommand('copy');
 					}
 				};
-
+			});
+			hook.ready(function() {
 				// Expand the README link in the sidebar when scrolling from the
 				// coverpage. Unfortunately auto2top makes the page jump.
 				// https://github.com/docsifyjs/docsify/issues/202
