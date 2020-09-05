@@ -84,21 +84,22 @@ pre::after {
 	font-weight: normal;
 }
 
-.editor {
-	display:grid;
-	grid-template-columns: 2fr 1fr;
+
+#md {
 	margin-top: 2rem;
-	grid-gap: 1rem 2rem;
 	font-size: 12px;
-	textarea {
-		border-width: 0;
-		resize: none;
-		opacity: 0;
-	}
-	textarea:focus {
+	display: block;
+	width: 100%;
+	border-width: 0;
+	resize: none;
+	opacity: 0;
+	&:focus {
 		opacity: 1;
 	}
-	textarea:focus + textarea {
-		opacity: 1;
-	}
+}
+
+
+#in {
+	// display: none;
+	opacity: 0;
 }

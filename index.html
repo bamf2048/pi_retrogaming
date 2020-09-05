@@ -64,17 +64,11 @@
 					dom.out.innerHTML = marked( dom.md.value = gzr(dom.in.value) );
 					auto_grow(dom.md);
 				}
-
 				if (dom.md) dom.md.onblur = function(){
 					if (this.value && zul) {
 						dom.out.innerHTML = marked(this.value);
-						auto_grow(this);
-					}
-				};
-				if (dom.in) dom.in.onclick = function(){
-					if (dom.md.value && zul) {
-						this.value = zul(dom.md.value);
-						this.select();
+						dom.in.value = zul(dom.md.value);
+						dom.in.select();
 						document.execCommand('copy');
 					}
 				};
