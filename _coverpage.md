@@ -1,3 +1,7 @@
+<p style="font-size: 10em; margin: 0 auto .5em">
+🥧<br>⚡️  
+</p>
+
 # Retropie Done Quick
 
 **This doc is not for beginners! But feel free to browse.**
