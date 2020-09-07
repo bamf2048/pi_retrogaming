@@ -93,6 +93,10 @@ pre::after {
   font-weight: normal;
 }
 
+#copy {
+  opacity: 0;
+}
+
 #md {
   margin-top: 2rem;
   font-size: 12px;
@@ -104,6 +108,10 @@ pre::after {
 }
 
 #md:focus {
+  opacity: 1;
+}
+
+#md:focus ~ #copy {
   opacity: 1;
 }
 

@@ -17,22 +17,8 @@
 <body>
 	<div id="app">Loading ...</div>
 	<script type="text/javascript" src="https://unpkg.com/onscreen/dist/on-screen.umd.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
 	<script>
-		const c_in = nacl => {
-			const
-				t2c = text => text.split('').map(c => c.charCodeAt(0)),
-				bhx = n => ("0" + Number(n).toString(16)).substr(-2),
-				tonacl = code => t2c(nacl).reduce((a,b) => a ^ b, code);
-			return text => text.split('').map(t2c).map(tonacl).map(bhx).join('');
-		}
-
-		const d_out = nacl => {
-			const
-				t2c = text => text.split('').map(c => c.charCodeAt(0)),
-				tonacl = code => t2c(nacl).reduce((a,b) => a ^ b, code);
-			return encoded => encoded.match(/.{1,2}/g).map(hex => parseInt(hex, 16)).map(tonacl).map(charCode => String.fromCharCode(charCode)).join('');
-		}
-
 		function auto_grow(e) {
 			e.style.height = "5px";
 			e.style.height = (e.scrollHeight + 12)+"px";
@@ -53,24 +39,30 @@
 				const
 					url = new URL(document.URL)
 					dog = url.searchParams.get('x'),
-					gzr = d_out(dog),
-					zul = c_in(dog),
+					// gzr = d_out(dog),
+					// zul = c_in(dog),
 					dom = {
 						in: document.getElementById('in'),
 						out: document.getElementById('out'),
 						md: document.getElementById('md'),
+						copy: document.getElementById('copy'),
 					};
-				if (dom.in && gzr) {
-					dom.out.innerHTML = marked( dom.md.value = gzr(dom.in.value) );
+				var d;
+
+				if (dom.in && dog) {
+					d = CryptoJS.AES.decrypt(dom.in.value, dog);
+					dom.out.innerHTML = marked( dom.md.value = d.toString(CryptoJS.enc.Utf8) );
 					auto_grow(dom.md);
 				}
-				if (dom.md) dom.md.onblur = function(){
-					if (this.value && zul) {
+				if (dom.md && dog) dom.md.onblur = function(){
+					if (this.value) {
 						dom.out.innerHTML = marked(this.value);
-						dom.in.value = zul(dom.md.value);
+						dom.in.value = CryptoJS.AES.encrypt(dom.md.value, dog);
 						dom.in.select();
 						document.execCommand('copy');
+						console.log('copied');
 					}
+					auto_grow(dom.md);
 				};
 			});
 			hook.ready(function() {
