@@ -1,6 +1,6 @@
 <div id="out">
     <form>
-        <input type="text" name="x">
+        <input type="text" name="x" value="No content">
     </form>
 </div>
 
