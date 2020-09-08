@@ -30,7 +30,7 @@ gzip -dc ~/Desktop/pibackup.gz | sudo dd of=/dev/rdisk# bs=1m conv=noerror,sync
 Backup `roms` into current directory
 
 ```
-rsync -tvuaz -e ssh pi@icade4.local:/home/pi/RetroPie/roms ./
+rsync -tvuaz --progress -e ssh pi@icade4.local:/home/pi/RetroPie/roms ./
 ```
 
 Suggest you use `screen` (`apt-get install screen`), run the rsync above and press `ctrl-a`, `ctrl-d` to let it continue. Then `screen list` or `screen -r` to get back in.
