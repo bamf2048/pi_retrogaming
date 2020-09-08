@@ -1,4 +1,8 @@
-<div id="out">Nothing here.</div>
+<div id="out">
+    <form>
+        <input type="text" name="x">
+    </form>
+</div>
 
 
 <textarea id="md"></textarea>

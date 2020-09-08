@@ -1,4 +1,6 @@
-# Backup Remotely from a 'nix machine
+# Backup 
+
+## Image remotely
 
 ```
 ssh pi@{ip or hostname} "sudo dd if=/dev/{yourdevice} bs=1M" | gzip - | dd of=~/Desktop/pibackup.gz
@@ -22,3 +24,18 @@ To restore on a Mac (not sure about Linux...):
 diskutil unmountDisk /dev/disk#
 gzip -dc ~/Desktop/pibackup.gz | sudo dd of=/dev/rdisk# bs=1m conv=noerror,sync
 ```
+
+## Rsync remotely
+
+Backup `roms` into current directory
+
+```
+rsync -tvuaz -e ssh pi@icade4.local:/home/pi/RetroPie/roms ./
+```
+
+Suggest you use `screen` (`apt-get install screen`), run the rsync above and press `ctrl-a`, `ctrl-d` to let it continue. Then `screen list` or `screen -r` to get back in.
+ 
+Sources: 
+- https://www.reddit.com/r/RetroPie/comments/2y1lzb/a_simple_script_to_keep_romssaves_synced_between/
+- https://stackoverflow.com/questions/15817583/rsync-multiple-remote-directories-to-local-machine-preserving-directory-paths
+- https://raspi.tv/2012/using-screen-with-raspberry-pi-to-avoid-leaving-ssh-sessions-open
